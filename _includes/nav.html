@@ -1,0 +1,96 @@
+<div class="clear"></div>
+<div class="navbar"><!--Start Navbar-->
+    <div class="wrapper">
+        <div class="logo">
+            <a class="home-link" href="{{ '/' | relative_url }}" title="Home" rel="home">
+                <img src="{{ 'assets/images/logo1.png' | relative_url }}" alt="{{ site.title }}"
+                     title="{{ site.title }}"></a>
+        </div>
+        <nav class="menu"> 
+            <a href="#" id="pull">Menu</a>
+            <div class="menu-main-menu-container">
+              <ul id="menu-main-menu" class="nav-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home
+                 {% if page.navPage == 'homePage' %}
+                    current-menu-item
+                    {% endif %}">
+                  <a href="/">Home</a></li>
+                <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children {% if page.navPage == 'aboutPage' %}
+                    current-menu-item
+                    {% endif %}">
+                  <a href="{{ 'about-us' | relative_url }}">About Us</a>
+                  <ul class="sub-menu">
+                    <li  class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about-us/#about-us">About Us</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about-us/#meet-the-team">Meet The Team</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children
+                    {% if page.navPage == 'servicesPage' or page.navPage == 'websiteDevelopmentPage' or page.navPage == 'websiteDesignPage' or page.navPage == 'seoServicesPage' or page.navPage == 'digitalStrategyPage' %}
+                    current-menu-item
+                    {% endif %}">
+                  <a href="{{ 'services' | relative_url }}">Services</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                      <a href="{{ 'services/website-development' | relative_url }}">Website Development</a>
+                      <ul class="sub-menu">
+                        <li  class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-development/web-security' | relative_url }}">Web Security</a></li>
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-development/php-asp-net-vb-net-development/' | relative_url }}">PHP, Asp.net, Vb.net Development</a></li>
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-development/domain-registration-and-web-hosting' | relative_url }}">Domain Registration and Web Hosting</a></li>
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-development/customized-web-development' | relative_url }}">Customized Web Development</a></li>
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-development/content-writing' | relative_url }}">Content Writing</a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-301">
+                      <a href="{{ 'services/website-design' | relative_url }}">Website Design</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-684" class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-design/website-facebook-page-maintenance' | relative_url }}">Website/ Facebook Page Maintenance</a></li>
+                        <li id="menu-item-685" class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-design/logo-designing' | relative_url }}">Logo Designing</a></li>
+                        <li id="menu-item-686" class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-design/graphic-designing' | relative_url }}">Graphic Designing</a></li>
+                        <li id="menu-item-687" class="menu-item menu-item-type-post_type"><a href="{{ 'services/website-design/flash-presentations' | relative_url }}">Flash Presentations</a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-268">
+                      <a href="{{ 'services/seo-services/' | relative_url }}">Seo Services</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/seo-services/why-seo/' | relative_url }}">Why Seo</a></li>
+                        <li  class="menu-item menu-item-type-post_type"><a href="{{ 'services/seo-services/offsiteonsite/' | relative_url }}">Offsite &amp; Onsite SEO</a></li>
+                        <li  class="menu-item menu-item-type-post_type"><a href="{{ 'services/seo-services/adwords/' | relative_url }}">Adwords</a></li>
+                        <li class="menu-item menu-item-type-post_type"><a href="{{ 'services/seo-services/semantic-search' | relative_url }}">Semantic Search</a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                      <a href="{{ 'services/digital-strategy' | relative_url }}">Digital Strategy</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-694" class="menu-item menu-item-type-post_type"><a href="{{ 'services/digital-strategy/corporate-branding-solution' | relative_url }}">Corporate Branding Solution</a></li>
+                        <li id="menu-item-693" class="menu-item menu-item-type-post_type"><a href="{{ 'services/digital-strategy/android-and-iphone-application' | relative_url }}">Android and iPhone application</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page
+                    {% if page.navPage == 'portfolioPage' %}
+                    current-menu-item
+                    {% endif %}">
+                  <a href="{{ 'portfolio' | relative_url }}">Portfolio</a></li>
+                <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page
+                    {% if page.navPage == 'BlogPage' %}
+                    current-menu-item
+                    {% endif %}">
+                  <a href="{{ 'blog' | relative_url }}">Blog</a></li>
+                <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page
+                    {% if page.navPage == 'contactUsPage' %}
+                    current_page_item
+                    {% endif %}">
+                  <a href="{{ 'contact-us' | relative_url }}">Contact Us</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </div>
+</div><!--End navbar-->
+
+<script type="text/javascript">
+  $(document).ready(fuction(){
+    alert("message?: DOMString");
+  });
+</script>

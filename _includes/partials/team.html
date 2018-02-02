@@ -1,0 +1,43 @@
+                 {% if page.partials.team %}
+                <header class="entry-header">
+                    <span id="meet-the-team">&nbsp;</span>
+                    <h1 class="entry-title">Meet The <span class="yellow">Team</span></h1>
+                </header>
+                <article id="post-556"
+                         class="post-556 post type-post status-publish format-standard hentry category-about-us category-uncategorized">
+                    <div class="entry-content">
+                        <div data-debug="false" data-align="center" data-enable-modal="true" class="mmt_container "
+                             id="">
+                            <div class="mmt_row row-fluid">
+       {% for team_m in site.data.team %}
+       {% if team_m.img and team_m.profession and team_m.name and team_m.bio %}
+       {% assign team_img_url = site.team_path | append: team_m.img | relative_url %}
+                                <div id="mmt_member_{{ forloop.index }}" class="reveal-modal" data_modal_centering="false"
+                                     style="left: 356.5px;">
+                                    <div class="mmt_bio_picture">
+                                        <img src="{{ team_img_url }}">
+                                    </div>
+                                    <h4>{{ team_m.name }}</h4>
+                                    <h6>{{ team_m.profession }}</h6>
+                                    <div>
+                                        {{ team_m.bio }}
+                                    </div>
+                                    <a class="close-reveal-modal">×</a>
+                                     </div>
+                                <div data-reveal-id="mmt_member_{{ forloop.index }}" class="mmt col-mmt-4" style="left: 100px; cursor: pointer;">
+                                    <div class="mmt_member_img">
+                                        <img src="{{ team_img_url }}" alt="{{ team_m.name }}">
+                                    </div>
+                                    <h4>{{ team_m.name }}</h4>
+                                    <h6>{{ team_m.profession }}</h6>
+                                </div>
+                                 {% endif %}
+                                {% endfor %}
+                                {% assign team_img_url = nil %}
+                            </div>
+                        </div><!-- .entry-content -->
+                    </div>
+                </article><!-- #post -->
+                <div class="clear">&nbsp;</div>
+                <hr>
+            {% endif %}

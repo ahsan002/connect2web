@@ -1,0 +1,35 @@
+<div class="fullwidth grey">       
+    <div class="portfolio">
+        <h1>Portfolio</h1>
+        <p> Take a look at our work portfolio and know how we can do this for you.</p>
+        <ul class="view">
+
+        {% assign portfolio_imges = site.data.portfolio | where: "feature_img", true %}
+      {% for portfolio_m in portfolio_imges limit: 6 %}
+       {% if portfolio_m.img and portfolio_m.target-name and portfolio_m.category %}
+       {% assign portfolio_img_url =  portfolio_m.img | relative_url %}
+
+           <li class="view-tenth afp-single-item" data-id="id-'{{ forloop.index }}" data-type="{{ portfolio_m.category }}">
+            <img alt="" class="img-link-initial" src="{{portfolio_img_url}}" style="display: block;">
+            <div class="mask"> 
+             <a target="_blank" href="{{ portfolio_m.target-url }}" class="mask_link hidnext">{{ portfolio_m.target-name }}</a>
+             <br>
+             <a target="_blank" href="{{ portfolio_m.target-url }}" class="hidnext">
+                <div class="link"> <i class="fa fa-link"> </i> </div>
+            </a>
+            <a id="colorbox-show-{{ forloop.index }}" class="colorbox cboxElement hidnext" title="" href="{{portfolio_img_url}}">
+                <div class="search"> <i class="fa fa-search"></i></div>
+            </a>
+
+            </div>
+            </li>
+    {% endif %}
+       {% endfor %}
+       {% assign portfolio_img_url = nil %}
+        </ul>   
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+

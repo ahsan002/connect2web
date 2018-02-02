@@ -1,0 +1,146 @@
+---
+layout: compress
+---
+<!doctype html>
+<html>
+<head>
+  {% include head.html %}
+
+<link rel='stylesheet' href=" {{ 'assets/css/pagenavi-css.css' | relative_url }}" type='text/css' media='all' />
+</head>
+<body class="page-template-default page page-id-16 no-avatars">
+{% include header.html %}
+<!--start Inner Middle section-->
+
+{{ content }}
+
+{% include partials/testimonials.html %}
+{% include partials/blog_resent_posts.html %}
+
+{% include footer.html %}
+
+<!--script for Tabber-->
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    jQuery(".tabs-menu a").click(function (event) {
+      event.preventDefault();
+      jQuery(this).parent().addClass("current");
+      jQuery(this).parent().siblings().removeClass("current");
+      var tab = jQuery(this).attr("href");
+      jQuery(".tab-content").not(tab).css("display", "none");
+      jQuery(tab).fadeIn();
+    });
+
+    jQuery('.img-link-initial').delay(100).queue(function () {
+      jQuery(this).css({"display": "block"});
+
+    });
+
+
+    jQuery(function () {
+      jQuery('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            jQuery('html,body').animate({
+              scrollTop: target.offset().top
+            }, 500, 'swing');
+            return false;
+          }
+        }
+      });
+    });
+
+    var i = 0;
+
+    jQuery('.afp-single-item').find('.mask').each(function () {
+      var href = jQuery(this).find("a:nth-child(1)").attr('href');
+      jQuery(this).find("a").addClass('hidnext');
+      if (href == '') {
+        jQuery(this).find('.link').css("display", "none");
+        jQuery(this).find('.mask_link').replaceWith(function () {
+          return jQuery("<span class='mask_link'>" + jQuery(this).html() + "</span>");
+        });
+      }
+    });
+
+
+  });
+</script>
+<script>
+  jQuery(function () {
+    var pull = jQuery('#pull');
+    menu = jQuery('nav ul');
+    menuHeight = menu.height();
+
+    jQuery(pull).on('click', function (e) {
+      e.preventDefault();
+      menu.slideToggle(10, "linear");
+      //submenu.slideToggle();
+      //menu.slideDown();
+    });
+
+
+    jQuery('.menu ul li:nth-child(2) ul.sub-menu li a, .menu ul li:nth-child(2) a').click(function () {
+      window.setTimeout(function () {
+        menu.slideToggle()
+      }, 100);
+    });
+
+    jQuery(window).resize(function () {
+      var w = jQuery(window).width();
+      if (w > 320 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
+</script>
+
+
+<!-- Custom Facebook Feed JS -->
+<script type="text/javascript">
+  var cfflinkhashtags = "false";
+</script>
+
+<script type='text/javascript'>
+  dur = 600;
+  afp_easing = 'easeInOutQuad';
+  startFX = 'normal';
+  hoverFX = 'normal';
+</script>
+<link rel='stylesheet' href='afp-style.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='colorbox.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='adipoli.css' type='text/css' media='all'/>
+<script type='text/javascript' src="{{ 'assets/js/cff-scripts.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery.form.min.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery.validate.min.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery.jvcf7_validation.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/functions.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/wp-embed.min.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery-easing.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/quicksand.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery.colorbox-min.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/afp-functions.js' | relative_url }}"></script>
+<script type='text/javascript' src="{{ 'assets/js/jquery.bxslider.min.js' | relative_url }}"></script>
+<script type="text/javascript">
+  var tw_100000 = null;
+
+  jQuery(document).ready(function () {
+    tw_100000 = jQuery('.testimonials-widget-testimonials100000').bxSlider({
+      adaptiveHeight: true,
+      auto: true,
+      autoControls: true,
+      autoHover: true,
+      controls: false,
+      mode: 'fade',
+      pager: false,
+      pause: 5000,
+      video: false,
+      slideMargin: 2,
+      slideWidth: 0
+    });
+  });
+</script>
+</body>
+</html>

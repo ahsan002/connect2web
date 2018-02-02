@@ -1,0 +1,23 @@
+{% if page.partials.recent_post %}
+<div class="right_area">
+    <h2 class="right_area_title">Recent<span class="yellow"> Post</span>
+    </h2>
+    <div class="rpwe-block ">
+        <ul class="rpwe-ul">
+   {% for post in site.posts limit:5 %}
+            <li class="rpwe-li rpwe-clearfix">
+                <h3 class="rpwe-title">
+                    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </h3>
+                <time class="rpwe-time published" datetime="{{ post.date }}">
+{{ post.date | date: "%b" }} {{ post.date | date: "%d" }}, {{ post.date | date: "%Y" }}
+                </time>
+                <div class="rpwe-summary">
+{{ post.content | strip_html | strip | strip_newlines | truncate: 50 }}
+                </div>
+            </li>
+       {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,44 @@
+---
+navPage: testimonialsPage
+title: Testimonials
+tags: 
+    - connect2ozweb
+description: ""
+---
+
+
+<div class="testimonials-widget-testimonials listing">
+	<div class="paging prepend">
+	</div>
+			{% for testimonials_m in site.data.testimonials %}
+		{% if testimonials_m.img and testimonials_m.author and testimonials_m.quote %}
+		{% assign testimonials_author_img_url = site.testimonials_path | append: testimonials_m.img | relative_url %}
+	<div class="testimonials-widget-testimonial list post-73 testimonials-widget type-testimonials-widget status-publish has-post-thumbnail" style="">
+		<!-- testimonials-widget-testimonials:73: -->
+		<span class="image">
+			<img width="41" height="40" src="{{testimonials_author_img_url}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
+		</span>
+		<blockquote>
+			<p>
+				<span class="open-quote">
+				</span>{{ testimonials_m.quote }}<span class="close-quote">
+				</span>
+			</p>
+		</blockquote>
+		<div class="credit">
+			<span class="author">{{ testimonials_m.author }}</span>
+			<span class="join-title">
+			</span>
+			<span class="job-title">{{ testimonials_m.job-title }}</span>
+			<span class="join-location">
+			</span>
+			<span class="location">{{ testimonials_m.location }}</span>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+	{% assign testimonials_author_img_url = nil %}
+	<div class="paging append">
+	</div>
+</div>
+

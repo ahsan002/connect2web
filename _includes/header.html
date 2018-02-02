@@ -1,0 +1,43 @@
+<header>
+    <div id="topBanner"><!--Start topBanner-->
+        <div class="top_header">
+            <div class="textwidget"> 
+                <div class="wrapper">
+                    <div class="headerLeft"><!--start headerLeft-->
+                        <div class="phone">{{ site.phone }}</div>
+                    </div>
+                    <!--End headerLeft-->
+                    <div class="headerRight"><!--start headerRight-->
+                        <div class="topMenu"><!--start topMenu-->
+                            <ul>
+                                <li><a href="{{ '/careers' | relative_url }}">Careers</a>|</li>
+                                <li><a href="{{ '/testimonials' | relative_url }}">Testimonials</a></li>
+                            </ul>
+                            <div class="social-links"><!--start social-links-->
+                                <div class="social-icon">
+                                    <a href="https://www.facebook.com/pages/Connect2OZweb/139205586146142?ref=tn_tnmn" class="fb-icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                  <a href="https://twitter.com/connect2ozweb" class="tw-icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                  <a href="https://plus.google.com/" class="gp-icon"></a>
+                                </div>
+                                <div class="social-icon">
+                                  <a href="https://www.linkedin.com" class="ld-icon"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End headerRight-->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!--End Wrapper-->
+        {% include nav.html %}
+        {% include slider.html %}
+        <!--End bannerBottom-->
+        <!--End Wrapper-->
+    </div>
+    <!--End topBanner-->
+</header>

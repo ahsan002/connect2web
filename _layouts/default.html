@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+<!doctype html>
+<html>
+{% include head.html %}
+
+<body class="page no-avatars
+{% if page.navPage == 'homePage' %} 
+home  page-template  page-template-page-home page-template-page-home-php  
+
+{% elsif  page.navPage == 'portfolioPage' %}
+page-template-default no-avatars
+ {% else %} 
+  page-template page-template-page-services-php page-parent
+{% endif %}
+">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</body>
+</html>

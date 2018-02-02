@@ -1,0 +1,18 @@
+.menu ul li{
+	float:left !important;
+}
+.menu ul li a{
+	float:left !important;
+}
+.topMenu ul li{
+	float:left !important;
+	}
+	.topMenu ul li a{
+	float:left !important;
+	}
+.navbar{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	background:#02738e;
+	opacity:0.8;
+	}

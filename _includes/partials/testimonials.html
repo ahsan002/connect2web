@@ -1,0 +1,33 @@
+{% if page.partials.testimonials %}
+<div class="testimonials fullwidth">
+    <div class="wrapper">
+        <h1>happy <span class="cyan">customers</span></h1>
+        <div class="testimonials-widget-testimonials testimonials-widget-testimonials100000">
+             {% for testimonials_m in site.data.testimonials %}
+       {% if testimonials_m.img and testimonials_m.author and testimonials_m.quote %}
+       {% assign testimonials_author_img_url = site.testimonials_path | append: testimonials_m.img | relative_url %}
+            <div class="testimonials-widget-testimonial testimonials-widget type-testimonials-widget status-publish has-post-thumbnail" style="">
+                <!-- testimonials-widget-testimonials:72: -->
+                <span class="image">
+                  <img src="{{testimonials_author_img_url}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" width="120" height="120"></span>
+                <blockquote>
+                    <span class="open-quote"></span>
+                    <div style="color: white;">{{ testimonials_m.quote }}</div>
+                    <span class="close-quote"> </span>
+                </blockquote>
+                <div class="credit">
+                    <span class="author">{{ testimonials_m.author }}</span>
+                    <span class="join-title"></span>
+                    <span class="job-title">{{ testimonials_m.job-title }}</span>
+                    <span class="join-location"></span>
+                    <span class="location">{{ testimonials_m.location }}</span>
+                </div>
+            </div>
+      {% endif %}
+      {% endfor %}
+      {% assign testimonials_author_img_url = nil %}
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="innerMiddle">
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+    <div class="innerContent">
+
+        <script src="{{ 'assets/js/jquery-1.11.1.js' | relative_url }}"></script>
+        <style>
+            .mmt_member_img > img {
+                width: 100%;
+            }
+        </style>
+        <div id="primary" class="content-area">
+            <div id="content" class="site-content" role="main">
+                <header class="entry-header">
+                    <span id="about-us">&nbsp;</span>
+                      	{% assign pageTitleFirstdPart = page.title | truncatewords: 1 , "" %}
+                    	{% assign pageTitleSecondPart = page.title | replace: pageTitleFirstdPart, "" %}
+                    <h1 class="entry-title">
+                    	{{ pageTitleFirstdPart }}<span class="yellow">{{ pageTitleSecondPart }}</span>
+                    </h1>
+                </header>
+                <article id="post-545" class="post type-post status-publish format-standard hentry category-about-us">
+                    <div class="entry-content">
+                      {{ content }}
+                    </div><!-- .entry-content -->
+                </article><!-- #post -->
+                <div class="clear">&nbsp;</div>
+                <hr>
+                {% include partials/team.html %}
+            </div><!-- #content -->
+        </div><!-- #primary -->
+
+    </div><!--End Inner Middle section-->
+    <div id="rightMenu">
+    	<ul class="rightMenu">
+    		{% for site-menu in page.menu %}
+    		<li class="page_item ">
+                <a href="{{ site-menu.url }}" 
+                {% if site-menu.class %}
+                     class="{{ site-menu.class }}" 
+                {% endif %}
+                >{{ site-menu.name }}</a>
+            </li>
+    		{% endfor %}
+		</ul>
+
+   {% include partials/company_info.html %}
+    </div>
+</div>
+
+<div class="clear"></div>
+<br>

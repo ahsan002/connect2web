@@ -1,0 +1,90 @@
+{% if page.navPage == 'homePage' %}
+<!--End Wrapper-->
+    <div class="patten-banner">
+        <div class="wrapper">
+            <div class="homesl"> 
+                <script type="text/javascript">var lsjQuery = jQuery;</script>
+                <script type="text/javascript"> lsjQuery(document).ready(function() { if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1','jquery'); } else { lsjQuery("#layerslider_1").layerSlider({hoverPrevNext: false, navStartStop: false, navButtons: false, skinsPath: '/assets/plugins/Layerslider/static/skins/'}) } }); 
+            </script>
+                <div class="ls-wp-fullwidth-container" style="height:auto; overflow: ">
+                    <div class="ls-wp-fullwidth-helper">
+                    <div id="layerslider_1" class="ls-wp-container" style="width:100%;height:761px;margin:0 auto;margin-bottom: 0px;">
+                    <div class="ls-slide" data-ls=" transition2d: all;">
+
+                        <img src="blank.gif" data-src="{{ 'assets/uploads/2015/03/banner.jpg' | relative_url }}" class="ls-bg" alt="banner" />
+
+                        <p class="ls-l" style="top:311px;left:761px;font-size:52px;color:#fff;background:#ffae00;white-space: nowrap;"></p>
+                    <div class="ls-l banner_wrapper" style="top:0px;left:0px;width:100%;">
+                    <div class="wrapper"> 
+                        <div class="bannerMiddle"> 
+                        <!--Start bannerMiddle--> 
+                    <h1>Web Solutions</h1> 
+                    <h3>For business users</h3>
+                     <p>We provide better Adwords advertising ROI and more conversions.</p> 
+                     <ul class="operating_sys"> 
+                        <ul class="operating_sys"> 
+                        <li class="anroid_icon"> 
+                        <li class="apple_icon"> 
+                        <li class="window_icon"> 
+                        <li class="d_icon"> 
+                        </ul> 
+                        <div class="clear"></div> 
+                    </ul> 
+                    </div> 
+                        <!--End bannerMiddle--> 
+                    </div> 
+                    </div>
+                </div>
+                <div class="ls-slide" data-ls=" transition2d: all;">
+                    <img src="{{ 'assets/images/blank.gif' | relative_url }}" data-src="{{'assets/uploads/2015/03/banner.jpg' | relative_url }}" class="ls-bg" alt="banner" />
+                    <div class="ls-l banner_wrapper" style="top:0px;left:0px;width:100%;white-space: nowrap;">
+                    <div class="wrapper"> 
+                        <div class="bannerMiddle"> 
+                        <!--Start bannerMiddle--> 
+                    <h1>Smart phone apps</h1> 
+                    <h3>For business users</h3>
+                     <p>we provide innovative and custom cross<br> platform mobile applications.</p> 
+                     <ul class="operating_sys"> 
+                        <li class="anroid_icon"> 
+                        <li class="apple_icon"> 
+                        <li class="window_icon"> 
+                        <li class="d_icon"> 
+                        </ul> 
+                        <div class="clear"></div> 
+                    </div> 
+                        <!--End bannerMiddle--> 
+                    </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+            <div class="bannerBottom"><!--Start bannerBottom-->
+                <h2>Welcome to Connect 2Oz Web</h2>
+            </div>            </div><!--End Wrapper-->
+        </div><!--End patten-banner-->
+        <!--End bannerBottom-->
+{% else %}
+ <div class="patten-banner">
+    <div class="wrapper">
+     <script type="text/javascript">var lsjQuery = jQuery;</script>
+     <script type="text/javascript"> lsjQuery(document).ready(function() {
+      if(typeof lsjQuery.fn.layerSlider == "undefined") { 
+        lsShowNotice('layerslider_2','jquery'); } else {
+         lsjQuery("#layerslider_2").layerSlider({skinsPath: '/assets/plugins/Layerslider/static/skins/'})
+          } 
+      }); 
+ </script>
+ <div class="ls-wp-fullwidth-container" style="height:577px;">
+    <div class="ls-wp-fullwidth-helper">
+        <div id="layerslider_2" class="ls-wp-container" style="width:1400px;height:577px;margin:0 auto;margin-bottom: 0px;">
+            <div class="ls-slide" data-ls=" transition2d: all;">
+                <img src="{{ page.sliderImg | default: 'assets/uploads/2015/03/about-us.jpg' | relative_url }}"  data-src="{{ page.sliderImg | default: 'assets/uploads/2015/03/about-us.jpg' | relative_url }}" class="ls-bg" alt="services-banner_mini">
+            </div>
+        </div>
+    </div>
+</div>            
+</div><!--End Wrapper-->
+</div>
+{% endif %}

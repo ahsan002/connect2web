@@ -1,0 +1,120 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta-tags -->
+{% include seo.html %}
+
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/style.css" type="text/css" rel="stylesheet">
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/connect2ozweb-responsive.css" type="text/css" rel="stylesheet">
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/normalize.css" type="text/css" rel="stylesheet">
+<!--[if IE 9]>
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/ie9.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<!--[if IE 8]>
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/ie9.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<!--Start font Awsome-->
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="{{site.baseurl}}/wp/favicon.ico" type="image/x-icon"/>
+<link href="{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/css/colorbox.css" type="text/css" rel="stylesheet">
+<!--[if IE 7]>
+<link href="font-awesome-4.3.0/font-awesome-4.3.0/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<script>
+  	jvcf7_loading_url= "{{site.baseurl}}/wp/wp-content/plugins/contact-form-7/images/ajax-loader.gif";
+    jvcf7_invalid_field_design = "theme_1";
+	jvcf7_show_label_error = "errorMsgshow";
+  </script>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.connect2ozweb.com.au\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet'  href='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/css/ssb-style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/css/ssb-admin.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/ParaAdmin/css/ParaAdmin.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/testimonials-widget/includes/libraries/bxslider-4/dist/jquery.bxslider.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/testimonials-widget/assets/css/testimonials-widget.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/Layerslider/static/css/layerslider.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/css/custom-style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet'  href='{{site.baseurl}}/wp/wp-content/plugins/custom-facebook-feed/css/cff-style.css?ver=2.4.5' type='text/css' media='all' />
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/easy-author-image/css/easy-author-image.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/jquery-validation-for-contact-form-7/css/jvcf7_validate.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/nivo-lightbox.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/themes/default/default.css' type='text/css' media='all' />
+<link rel='stylesheet' href='{{site.baseurl}}/wp/wp-content/plugins/wp-pagenavi/pagenavi-css.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='{{site.baseurl}}/wp/wp-content/plugins/meet-my-team/public/assets/css/public.min.css' type='text/css' media='all' />
+<link rel='stylesheet'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/genericons/genericons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='{{site.baseurl}}/wp/wp-content/themes/connect2ozweb/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/js/ssb-scripts.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/js/jquery.tablednd.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/social-share-button/ParaAdmin/js/ParaAdmin.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/Layerslider/static/js/layerslider.kreaturamedia.jquery.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/Layerslider/static/js/greensock.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/Layerslider/static/js/layerslider.transitions.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.transit.min.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.carouFredSel-6.2.1-packed.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.touchSwipe.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var chpcsArgs = {"auto_scroll":"false","circular":"false","easing_effect":"linear","item_align":"center","direction":"left","touch_swipe":"false","item_width":"960","time_out":"3000","css_transition":"false","infinite":"true","fx":"scroll"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/script.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/responsive-lightbox-lite/assets/nivo-lightbox/nivo-lightbox.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rllArgs = {"script":"nivo_lightbox","selector":"lightbox","custom_events":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/responsive-lightbox-lite/assets/inc/script.js'></script>
+<script type='text/javascript' src='{{site.baseurl}}/wp/wp-content/plugins/meet-my-team/public/assets/js/public.min.js'></script>
+
+<style type='text/css'>
+.ssb-share.round a{margin-right:0px;}
+
+
+#toTop {
+	display: none;
+	position: fixed;
+	bottom: 11px;
+	right: 10px;
+	z-index: 999;
+	border: none;
+	outline: none;
+	background-color: #24758b;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#toTop:hover{
+	background-color: #272822; 
+}
+
+
+		</style>

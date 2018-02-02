@@ -1,0 +1,141 @@
+---
+layout: default
+discription:  Feel free to contact us or please fill up below in the following details and We will be in touch shortly.
+#
+sliderImg: 'assets/uploads/2015/03/ContactUs.jpg'
+navPage: contactUsPage
+parmalink: /contact-us/
+title: 'Contact Us'
+tags: 
+    - connect2ozweb
+description: ""
+---
+
+
+<div class="innerMiddle">
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+    <div id="primary" class="content-area">
+        <div id="content" class="site-content" role="main">
+
+
+            <article id="post-20" class="post-20 page type-page status-publish hentry">
+                <header class="entry-header">
+
+                    <h1 class="entry-title">Contact <span class="yellow">Us</span></h1>
+                </header><!-- .entry-header -->
+
+                <div class="entry-content">
+                    <!--Start Inner page section-->
+                    <div class="innerMiddle">
+                        <div class="left-contact">
+
+                            Feel free to contact us or please fill up below in the following details
+                            and We will be in touch shortly.
+                            <h3>Contact Form</h3>
+
+                            <div role="form" class="wpcf7" id="wpcf7-f4-p20-o1" dir="ltr" lang="en-US">
+
+                                <form id="contact-form" method="post" name="contract-form" action="https://formspree.io/{{ site.email.info }}/">
+
+                                    <div class="contact-name">Full Name*<br>
+                                        <span class="wpcf7-form-control-wrap user-name">
+                                            <input name="user-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required required" aria-required="true" aria-invalid="false" type="text"></span></div>
+                                    <div class="contact-email">Email ID*<br>
+                                        <span class="wpcf7-form-control-wrap user-email">
+                                            <input name="user-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email required email" aria-required="true" aria-invalid="false" type="email"></span>
+                                    </div>
+                                    <div class="contact-subject">Subject*<br>
+                                        <span class="wpcf7-form-control-wrap user-subject">
+                                            <input name="user-subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required required" aria-required="true" aria-invalid="false" type="text"></span>
+                                    </div>
+                                    <div class="contact-message">Message*<br>
+                                        <span class="wpcf7-form-control-wrap user-message">
+                                            <textarea name="user-message"cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required required"  aria-required="true"  aria-invalid="false"></textarea></span>
+                                    </div>
+                                    <input type="text" name="_gotcha" style="display:none" />
+                                    <div class="submit">
+                                        <input value="Send Message" class="wpcf7-form-control" type="submit">
+                                        <img class="ajax-loader" src="{{ 'assets/plugins/contact-form-7/ajax-loader.gif' | relative_url }}" style="visibility: hidden;">
+                                    </div>
+                                </form>
+
+                                <script>
+                                    var $contactForm = $('#contact-form');
+                                    $contactForm.submit(function(e) {
+                                        e.preventDefault();
+                                        $.ajax({
+                                            url: 'https://formspree.io/leluhifaz@cobin2hood.com',
+                                            method: 'POST',
+                                            // contentType:"application/json; charset=utf-8",
+                                            data: $(this).serialize(),
+                                            dataType: 'json',
+                                            beforeSend: function() {
+
+                                                $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+                                            },
+                                            success: function(data) {
+                                                $contactForm.find('.alert--loading').hide();
+                                                $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+                                                $('.ajax-loader').css('visibility', 'hidden');
+                                            },
+                                            error: function(err) {
+                                                $contactForm.find('.alert--loading').hide();
+                                                $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+                                                $('.ajax-loader').css('visibility', 'hidden');
+                                            }
+                                        });
+                                    });
+
+
+                                </script>
+                            </div>
+                        </div>
+
+                      <div class="right-contact">
+                        <div class="right-contact-top">
+                          <h2>Call Us Today</h2>
+                          <div class="australia">
+                            {% if site.address.australia %}
+                            {{ site.address.australia }}
+                            {% endif %}
+                          </div>
+
+                          <div class="telephone">{% if site.phone %} {{ site.phone }} {% endif %}</div>
+                          <div class="india">
+                            {% if site.address.india %}
+                            {{ site.address.india }}
+                            {% endif %}
+                          </div>
+                          {% if site.eamil_con.sales %}
+                          <div class="rightEmail"><a href="mailto:{{site.eamil_con.sales}}">{{site.eamil_con.sales}}</a>
+                            <p>(for quotes and free consultations)</p></div>
+                          {% endif %}
+
+                          {% if site.eamil_con.support %}
+                          <div class="rightEmail">
+                            <a href="mailto:{{site.email.support}}">{{site.eamil_con.support}}</a>
+                            <p>(for queries and general support)</p>
+                          </div>
+                          {% endif %}
+
+                        </div>
+                        <div class="right-contact-bottom">
+                          <iframe src="https://www.google.com/maps/embed?pb={{ site.google-map }}" style="border:0" height="191" frameborder="0" width="462"></iframe>
+                        </div>
+                      </div>
+
+                      <!--End Inner page section-->
+                        <div class="clear"></div>
+                    </div>
+                </div><!-- .entry-content -->
+            </article><!-- #post -->
+        </div><!-- #content -->
+    </div><!-- #primary -->
+</div>
+<div class="clear"></div>
+<br>

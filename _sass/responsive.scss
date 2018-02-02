@@ -1,0 +1,153 @@
+@media screen and (min-width: 320px) and (max-width: 326px) {
+
+
+  ul#menu-footer-second-menu{
+    float: left;
+    padding-top: 12px;
+  }
+}
+@media screen and (min-width: 385px) and (max-width: 464px) {
+
+
+  ul#menu-footer-second-menu{
+    float: right;
+    padding-top: 12px;
+  }
+
+  .footerSection2 {
+    padding-left: 0;
+    width: 32%;
+  }
+
+  .footerSection1 {
+    width: 90%;
+  }
+
+  .footerSection2 {
+    overflow: hidden;
+    padding: 15px;
+    margin: 20px 0 50px;
+    width: 90%;
+  }
+  .footer_middel{
+    width: 85%;
+  }
+  .footer_middel img {
+    width: 95%;
+  }
+
+}
+
+@media screen and (min-width: 479px) and (max-width: 525px) {
+
+  .footerSection1 {
+    width: 67%;
+  }
+
+
+  .footerSection2 {
+    padding-left: 0;
+    width: 31%;
+  }
+
+
+
+}
+@media screen and (min-width: 640px) and (max-width: 745px) {
+
+  .footerSection1 {
+    width: 65%;
+  }
+
+  .footerSection2 {
+    width: 45%;
+    margin-left: 0;
+    padding-top: 25px;
+  }
+
+  .footerSection3 {
+    margin-left: 0;
+    width: 51%;
+    padding-top: 35px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width:700px) and (max-width: 940px) {
+
+  .headerLeft {
+    width: auto;
+  }
+  .headerRight {
+    width: auto;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 699px) {
+
+  .headerRight {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 639px) {
+
+  .top_header {
+    height: 152px;
+  }
+
+  .headerLeft {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .headerRight {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+.ssb-share.round a{margin-right:0px;}
+
+#carouselBlog{
+  .chpcs_foo_content img {
+    max-width: 960px;
+  }
+  .chpcs_image_carousel .chpcs_prev, .chpcs_image_carousel .chpcs_next{
+    background: rgba(195, 195, 195, 0.01);
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    line-height: 39px;
+    width: 42px;
+    height: 42px;
+    margin-top: -32px;
+  }
+  .chpcs_image_carousel.chpcs_prev:hover, .chpcs_image_carousel .chpcs_next:hover {
+    color: rgba(248, 175, 2, 0.98);
+  }
+  #wa_chpcs_pager a {
+    background: rgba(248, 175, 2, 0.98);
+  }
+
+  .blogBottom{
+    padding-bottom: 30px;
+  }
+}
+
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
